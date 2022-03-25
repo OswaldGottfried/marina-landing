@@ -1,0 +1,13 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  max-width: initial;
+  padding: 0 1em;
+  margin: auto;
+}
+
+@media (min-width: 1024px) {
+  .root {
+    max-width: var(--layout-content-width);
+  }
+}

@@ -1,0 +1,101 @@
+.menuWrapper {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--gray-0);
+  transition: 0.2s;
+  margin: 0;
+  transform: translateX(-100%);
+}
+
+.menuFooter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menuPhone {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  padding: 0 16px;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  color: var(--accent-color);
+  background: rgb(0 0 0 / 16%);
+  border-radius: 64px;
+}
+
+.menuPhoneIcon {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  fill: var(--accent-color);
+  transform: rotate(5deg);
+}
+
+.menuLabel {
+  margin-top: 24px;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  color: #6a6a6a;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 36px 24px;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+}
+
+.menuItem {
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 32px;
+  color: white;
+  cursor: pointer;
+}
+
+.menuOpen {
+  transform: translateX(0);
+}
+
+.firstLine {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.mobilePhone,
+.mobilePhoneFixed {
+  display: none;
+  color: var(--dust-heavy);
+}
+
+.icon {
+  z-index: 1;
+  min-width: 20px;
+  cursor: pointer;
+  fill: white;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.highlight {
+  font-weight: bold;
+}
