@@ -1,3 +1,7 @@
+.post {
+  min-height: calc(100vh - 258px);
+}
+
 .post img {
   width: 100%;
 }
@@ -5,9 +9,9 @@
 .backButton {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  font-size: 1em;
   color: var(--white);
-  margin: 2em 0 2em -12px;
+  margin: 1em 0 1em -12px;
   cursor: pointer;
 }
 
