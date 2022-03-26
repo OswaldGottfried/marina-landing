@@ -15,7 +15,7 @@ export const CTAButton: React.FC<Props> = ({ className, ...props }) => {
 
   return (
     <Button className={className} onClick={handleButtonClick} {...props}>
-      Откликнуться
+      Связаться со мной
     </Button>
   )
 }

@@ -1,0 +1,92 @@
+.root {
+  display: flex;
+  gap: 2em;
+  align-items: stretch;
+  width: 100%;
+}
+
+.root:not(:last-child) {
+  margin-bottom: 2em;
+}
+
+.descriptionColumn {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1em 2em;
+  color: var(--white);
+  background-color: var(--green);
+}
+
+.descriptionColumn > h3 {
+  font-size: 1.5em;
+  line-height: 1.23;
+  word-break: break-word;
+}
+
+.root:nth-child(even) > .descriptionColumn {
+  background-color: var(--gray-2);
+}
+
+.root:nth-child(3n) > .descriptionColumn {
+  background-color: var(--accent-color);
+}
+
+.imageColumn {
+  display: none;
+}
+
+.hr {
+  width: 100%;
+  max-width: 50px;
+  height: 3px;
+  margin: 0;
+  margin-bottom: 23px;
+  background-color: var(--white);
+  border: 0;
+  opacity: 0.6;
+}
+
+.button {
+  margin-top: 2em;
+}
+
+.marginBottom {
+  margin-bottom: 1em;
+}
+
+@media (min-width: 768px) {
+  .imageColumn {
+    display: flex;
+    flex-basis: 30%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .imageColumn > img {
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+  }
+
+  .root:nth-child(even) > .imageColumn {
+    order: 1;
+  }
+
+  .descriptionColumn {
+    flex: 1 0 400px;
+    padding: 25px 60px 60px;
+  }
+
+  .textColumn > p {
+    max-width: 500px;
+  }
+
+  .button {
+    width: 240px;
+    margin-top: 60px;
+  }
+
+  .descriptionColumn > h3 {
+    font-size: 38px;
+  }
+}

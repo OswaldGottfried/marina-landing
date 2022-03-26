@@ -13,6 +13,7 @@ const Template: React.FC<Props> = ({ children, className }) => (
     <Header />
     <main className={clsx(style.main, className)}>{children}</main>
     <Footer />
+    {/* <div className={style.background}></div> */}
   </>
 )
 

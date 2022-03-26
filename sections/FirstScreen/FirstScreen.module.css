@@ -1,7 +1,6 @@
 .wrapper {
   max-width: 100%;
   height: 100vh;
-  background-color: var(--background-black);
 }
 
 .section {
@@ -27,17 +26,39 @@
   text-shadow: 0 0 4px var(--black);
 }
 
-.actionText > span {
-  color: var(--accent-color);
-}
-
 .button {
   margin-top: 4em;
   max-width: 514px;
 }
 
+.inline {
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.image {
+  display: none;
+  margin-bottom: 47px;
+}
+
+.mobilePhoto {
+  display: block;
+}
+
 @media (min-width: 1024px) {
   .actionText {
     font-size: 5em;
+  }
+
+  .image {
+    display: block;
+    align-self: flex-end;
+  }
+
+  .mobilePhoto {
+    display: none;
   }
 }

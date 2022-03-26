@@ -1,4 +1,10 @@
-import { createRef, RefObject, useCallback, useEffect, useState } from 'react'
+import {
+  createRef,
+  RefObject,
+  useCallback,
+  useLayoutEffect,
+  useState,
+} from 'react'
 
 import cn from 'clsx'
 
@@ -24,7 +30,7 @@ export const Header: React.FC = () => {
     }
   }
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     window.addEventListener('scroll', stickyHeader)
     window.addEventListener('resize', stickyHeader)
 
