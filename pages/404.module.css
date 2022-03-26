@@ -1,0 +1,13 @@
+.default404 {
+  height: 100vh;
+  text-align: center;
+  width: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+}
+
+.default404 a:hover {
+  text-decoration: underline;
+}

@@ -1,8 +1,13 @@
-import '../styles/globals.css'
+import 'styles/globals.css'
 import type { AppProps } from 'next/app'
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
-}
+import style from './_app.module.css'
+
+const MyApp = ({ Component, pageProps }: AppProps) => (
+  <>
+    <Component {...pageProps} />
+    <div className={style.background}></div>
+  </>
+)
 
 export default MyApp

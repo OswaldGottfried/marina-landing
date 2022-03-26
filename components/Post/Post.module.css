@@ -1,0 +1,22 @@
+.post img {
+  width: 100%;
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--white);
+  margin: 2em 0 2em -12px;
+  cursor: pointer;
+}
+
+.backButton:hover {
+  text-decoration: underline;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+  stroke: var(--white);
+}

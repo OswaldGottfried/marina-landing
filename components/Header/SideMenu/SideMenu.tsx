@@ -50,7 +50,6 @@ export const SideMenu = memo<SideMenuProps>(({ open, onClose }) => {
             <Image
               src="/icons/close.svg"
               alt="Закрыть меню"
-              className={style.phoneIcon}
               width={20}
               height={20}
             />
