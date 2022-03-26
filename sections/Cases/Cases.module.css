@@ -11,7 +11,7 @@
   text-transform: uppercase;
   padding: 0;
   margin: 0;
-  animation: marquee 60s infinite linear;
+  animation: marquee 100s infinite linear;
 }
 
 .marqueeText > span {
@@ -22,9 +22,32 @@
   color: var(--color-white);
 }
 
-.case h4 {
-  margin-bottom: 0;
-  padding-bottom: 0;
+.cases {
+  display: flex;
+  width: 100%;
+  gap: 1em;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 1em;
+  flex-basis: 100%;
+}
+
+.cases > div:first-child > a:first-child {
+  background-color: var(--black);
+  box-shadow: -2px 0px 30px 0px rgba(0 0 0 / 60%);
+}
+
+.cases > div:last-child > a:last-child {
+  background-color: var(--white);
+  color: var(--black);
+  text-shadow: none;
+  box-shadow: -2px 0px 30px 0px rgba(255 255 255 / 30%);
 }
 
 @keyframes marquee {
@@ -41,5 +64,13 @@
   .marquee {
     font-size: 2em;
     margin: -54px auto 1em;
+  }
+
+  .cases {
+    flex-direction: row;
+  }
+
+  .column {
+    flex-basis: 50%;
   }
 }

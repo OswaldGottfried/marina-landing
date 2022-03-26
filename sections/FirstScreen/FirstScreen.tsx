@@ -18,7 +18,7 @@ export const FirstScreen: React.FC = () => (
             <br />
             Заслужили
           </h1>
-          <CTAButton className={style.button} />
+          {/* <CTAButton className={style.button} /> */}
         </div>
         <div className={style.image}>
           <Image

@@ -1,15 +1,26 @@
 import { DesktopContentWrapper } from 'components/DesktopContentWrapper'
 import style from './Cases.module.css'
-import { CASES } from './casesFixture'
-import { TextWithImageBlock } from 'components/TextWithImageBlock/TextWithImageBlock'
+import { PostOrPage } from '@tryghost/content-api'
+import { Case } from './Case/Case'
 
-export const Cases = () => {
+type Props = {
+  cases: PostOrPage[]
+}
+
+export const Cases: React.FC<Props> = ({ cases }) => {
   let title = []
-  for (let index = 0; index < 10; index++) {
+  for (let index = 0; index < 8; index++) {
     title.push('Кейсы?')
     title.push('А что ты делаешь?')
     title.push('Что по проектам?')
+    title.push('SMM?')
+    title.push('Упаковка страниц?')
   }
+
+  const half = Math.ceil(cases.length / 2)
+
+  const firstColumn = cases.slice(0, half)
+  const secondColumn = cases.slice(-half)
 
   return (
     <>
@@ -20,15 +31,25 @@ export const Cases = () => {
           ))}
         </h2>
       </div>
-      <DesktopContentWrapper as="section">
-        {CASES.map(({ title, description, result }, index) => (
-          <TextWithImageBlock
-            key={index}
-            title={title}
-            description={description}
-            result={result}
-          />
-        ))}
+      <DesktopContentWrapper as="section" className={style.cases}>
+        <div className={style.column}>
+          {firstColumn.map(
+            ({ id, title, slug, excerpt, feature_image: featureImage }) => (
+              <Case
+                key={id}
+                image={featureImage}
+                title={title}
+                slug={slug}
+                excerpt={excerpt}
+              />
+            ),
+          )}
+        </div>
+        <div className={style.column}>
+          {secondColumn.map(({ id, title, slug, excerpt }) => (
+            <Case key={id} title={title} slug={slug} excerpt={excerpt} />
+          ))}
+        </div>
       </DesktopContentWrapper>
     </>
   )
