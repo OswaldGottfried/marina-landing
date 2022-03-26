@@ -1,36 +1,19 @@
 import { PostOrPage } from '@tryghost/content-api'
-import { DesktopContentWrapper } from 'components/DesktopContentWrapper'
-import Template from 'components/Template/Template'
+
 import { GetStaticProps, NextPage } from 'next'
 import { getPosts } from 'pages/api/post'
 import { getPost } from 'pages/api/post/[slug]'
-import style from './[slug].module.css'
-import { useRouter } from 'next/router'
 
-import Arrow from 'public/icons/arrow.svg'
+import { Post } from 'components/Post/Post'
 
 type Props = {
   post?: PostOrPage
 }
 
 const PostPage: NextPage<Props> = ({ post }) => {
-  const { pathname, back } = useRouter()
-  if (!post) return null
+  if (!post || !post.html) return null
 
-  return (
-    <DesktopContentWrapper as="article">
-      <button
-        type="button"
-        aria-label="Назад"
-        className={style.backButton}
-        onClick={() => back()}
-      >
-        <Arrow className={style.icon} /> Назад
-      </button>
-      <h1>{post.title}</h1>
-      {post.html && <div dangerouslySetInnerHTML={{ __html: post.html }} />}
-    </DesktopContentWrapper>
-  )
+  return <Post __html={post.html} title={post.title}></Post>
 }
 
 export async function getStaticPaths() {

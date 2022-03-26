@@ -16,6 +16,7 @@
 
 .case:hover {
   transform: scale(1.03);
+  text-decoration: none;
   box-shadow: -2px 0px 30px 0px rgba(247 88 88 / 80%);
 }
 

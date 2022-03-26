@@ -1,5 +1,5 @@
-.post {
-  margin-top: 200px;
+.post img {
+  width: 100%;
 }
 
 .backButton {
@@ -16,7 +16,7 @@
 }
 
 .icon {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   stroke: var(--white);
 }
