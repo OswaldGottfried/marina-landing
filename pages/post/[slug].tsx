@@ -5,6 +5,7 @@ import { getPosts } from 'pages/api/post'
 import { getPost } from 'pages/api/post/[slug]'
 
 import { Post } from 'components/Post/Post'
+import { Footer } from 'components/Footer/Footer'
 
 type Props = {
   post?: PostOrPage
@@ -13,7 +14,12 @@ type Props = {
 const PostPage: NextPage<Props> = ({ post }) => {
   if (!post || !post.html) return null
 
-  return <Post __html={post.html} title={post.title}></Post>
+  return (
+    <>
+      <Post __html={post.html} title={post.title}></Post>
+      <Footer />
+    </>
+  )
 }
 
 export async function getStaticPaths() {
