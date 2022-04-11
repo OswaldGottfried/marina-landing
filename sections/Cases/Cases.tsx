@@ -1,7 +1,7 @@
 import { DesktopContentWrapper } from 'components/DesktopContentWrapper'
 import style from './Cases.module.css'
 import { PostOrPage } from '@tryghost/content-api'
-import { Case } from './Case/Case'
+import { PostCard } from './PostCard/PostCard'
 
 type Props = {
   cases: PostOrPage[]
@@ -34,12 +34,16 @@ export const Cases: React.FC<Props> = ({ cases }) => {
       <DesktopContentWrapper as="section" className={style.cases}>
         <div className={style.column}>
           {firstColumn.map(
-            ({ id, title, slug, excerpt, feature_image: featureImage }) => (
-              <Case
+            (
+              { id, title, slug, excerpt, feature_image: featureImage },
+              index,
+            ) => (
+              <PostCard
                 key={id}
                 image={featureImage}
                 title={title}
                 slug={slug}
+                showImage={index !== 0}
                 excerpt={excerpt}
               />
             ),
@@ -47,7 +51,7 @@ export const Cases: React.FC<Props> = ({ cases }) => {
         </div>
         <div className={style.column}>
           {secondColumn.map(({ id, title, slug, excerpt }) => (
-            <Case key={id} title={title} slug={slug} excerpt={excerpt} />
+            <PostCard key={id} title={title} slug={slug} excerpt={excerpt} />
           ))}
         </div>
       </DesktopContentWrapper>

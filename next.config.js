@@ -10,7 +10,7 @@ const nextConfig = {
     return config
   },
   images: {
-    domains: ['images.unsplash.com'],
+    domains: ['images.unsplash.com', 'localhost', 'blog.molitvina.ru'],
   },
 }
 

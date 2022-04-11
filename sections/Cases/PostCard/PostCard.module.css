@@ -1,23 +1,34 @@
-.case {
+.postCard {
   box-sizing: border-box;
   width: auto;
   min-width: 0em;
-  padding: 20px;
+  padding: 1em 2em;
   border-radius: 12px;
   border: none;
-  background-color: rgb(247, 88, 88);
-  box-shadow: -2px 0px 30px 0px rgba(247 88 88 / 50%);
   cursor: pointer;
   position: relative;
-  text-align: center;
   min-height: 150px;
-  transition: transform 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-.case:hover {
+.postCard:hover {
   transform: scale(1.03);
-  text-decoration: none;
   box-shadow: -2px 0px 30px 0px rgba(247 88 88 / 80%);
+}
+
+.postCard > a {
+  text-decoration: none;
+}
+
+.backgroundColor {
+  background-color: rgb(247, 88, 88);
+  box-shadow: -2px 0px 30px 0px rgba(247 88 88 / 50%);
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .image {
@@ -34,7 +45,7 @@
   box-shadow: 0px 12px 30px -10px rgb(0 0 0 / 80%);
 }
 
-.withImage > h3,
+.withImage > .title,
 .withImage > p {
   text-shadow: 1px 1px 1px var(--gray-0);
 }

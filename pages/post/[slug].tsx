@@ -13,10 +13,16 @@ type Props = {
 
 const PostPage: NextPage<Props> = ({ post }) => {
   if (!post || !post.html) return null
+  console.log({ post })
 
   return (
     <>
-      <Post __html={post.html} title={post.title}></Post>
+      <Post
+        __html={post.html}
+        title={post.title}
+        slug={post.slug}
+        featureImage={post.feature_image}
+      />
       <Footer />
     </>
   )

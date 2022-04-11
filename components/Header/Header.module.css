@@ -16,8 +16,9 @@
   justify-content: space-between;
 }
 
-.contentContainer > h1 {
+.title {
   max-width: 200px;
+  font-size: 2em;
 }
 
 .icon {

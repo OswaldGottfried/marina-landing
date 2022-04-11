@@ -2,8 +2,8 @@
   min-height: calc(100vh - 258px);
 }
 
-.post img {
-  width: 100%;
+.title {
+  margin-top: 1em;
 }
 
 .backButton {
