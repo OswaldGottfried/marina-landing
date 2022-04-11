@@ -48,7 +48,7 @@ export const Header: React.FC = () => {
       >
         <Burger className={style.icon} />
       </button>
-      <h1>
+      <h1 className={style.title}>
         <span>Маркетолог</span> Марина
       </h1>
     </DesktopContentWrapper>

@@ -1,0 +1,23 @@
+:root {
+  /* Colors */
+  --accent-color-hover: #e64646;
+  --accent-color: #ef5f36;
+  --background-black: #22232b;
+  --black: #393636;
+  --gray-0: #282828;
+  --gray-1: #333;
+  --gray-2: #383838;
+  --gray-3: #4f4f4f;
+  --gray-4: #828282;
+  --gray-5: #a0a0a0;
+  --gray-6: #bdbdbd;
+  --gray-7: #dadada;
+  --gray-8: #e0e0e0;
+  --gray-9: #f2f2f2;
+  --layout-content-width: 1144px;
+  --screen-size-l: 1200px;
+  --screen-size-m: 992px;
+  --screen-size-s: 768px;
+  --screen-size-xs: 576px;
+  --white: #fff;
+}

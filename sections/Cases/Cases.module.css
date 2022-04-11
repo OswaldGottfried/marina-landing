@@ -38,12 +38,12 @@
   flex-basis: 100%;
 }
 
-.cases > div:first-child > a:first-child {
+.cases > div:first-child > article:nth-child(2n + 2) {
   background-color: var(--black);
   box-shadow: -2px 0px 30px 0px rgba(0 0 0 / 60%);
 }
 
-.cases > div:last-child > a:last-child {
+.cases > div:last-child > article:nth-child(2n + 2) {
   background-color: var(--white);
   color: var(--black);
   text-shadow: none;
