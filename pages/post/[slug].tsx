@@ -13,7 +13,6 @@ type Props = {
 
 const PostPage: NextPage<Props> = ({ post }) => {
   if (!post || !post.html) return null
-  console.log({ post })
 
   return (
     <>
