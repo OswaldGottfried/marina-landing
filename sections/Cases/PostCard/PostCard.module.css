@@ -2,7 +2,6 @@
   box-sizing: border-box;
   width: auto;
   min-width: 0em;
-  padding: 1em 2em;
   border-radius: 12px;
   border: none;
   cursor: pointer;
@@ -11,9 +10,24 @@
   transition: all 0.3s ease-in-out;
 }
 
+.postCard:nth-child(2n + 2) {
+  background-color: var(--black);
+  box-shadow: -2px 0px 30px 0px rgba(0 0 0 / 60%);
+}
+
+.postCard:nth-child(2n + 2):hover {
+  box-shadow: -2px 0px 30px 5px rgba(0 0 0 / 80%);
+}
+
 .postCard:hover {
   transform: scale(1.03);
-  box-shadow: -2px 0px 30px 0px rgba(247 88 88 / 80%);
+  box-shadow: -2px 0px 30px 5px rgba(247 88 88 / 80%);
+}
+
+.postCard:last-child {
+  background-color: var(--white);
+  color: var(--black);
+  box-shadow: -2px 0px 30px 0px rgba(255 255 255 / 30%);
 }
 
 .postCard > a {
@@ -32,20 +46,20 @@
 }
 
 .image {
-  z-index: -1;
-  border-radius: 12px;
+  border-radius: 12px 12px 0 0;
 }
 
 .withImage {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.6);
   box-shadow: 0px 12px 30px -10px rgb(0 0 0 / 60%);
+  text-shadow: 1px 1px 2px black;
 }
 
 .withImage:hover {
+  background-color: rgba(0, 0, 0, 0.6);
   box-shadow: 0px 12px 30px -10px rgb(0 0 0 / 80%);
 }
 
-.withImage > .title,
-.withImage > p {
-  text-shadow: 1px 1px 1px var(--gray-0);
+.description {
+  padding: 0 2em 2em;
 }

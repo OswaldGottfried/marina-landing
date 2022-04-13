@@ -38,18 +38,6 @@
   flex-basis: 100%;
 }
 
-.cases > div:first-child > article:nth-child(2n + 2) {
-  background-color: var(--black);
-  box-shadow: -2px 0px 30px 0px rgba(0 0 0 / 60%);
-}
-
-.cases > div:last-child > article:nth-child(2n + 2) {
-  background-color: var(--white);
-  color: var(--black);
-  text-shadow: none;
-  box-shadow: -2px 0px 30px 0px rgba(255 255 255 / 30%);
-}
-
 @keyframes marquee {
   0% {
     transform: translate(0, 0);

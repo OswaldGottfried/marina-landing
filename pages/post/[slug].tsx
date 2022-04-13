@@ -19,7 +19,6 @@ const PostPage: NextPage<Props> = ({ post }) => {
       <Post
         __html={post.html}
         title={post.title}
-        slug={post.slug}
         featureImage={post.feature_image}
       />
       <Footer />
