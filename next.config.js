@@ -10,7 +10,12 @@ const nextConfig = {
     return config
   },
   images: {
-    domains: ['images.unsplash.com', 'localhost', 'blog.molitvina.ru'],
+    domains: [
+      'images.unsplash.com',
+      'localhost',
+      'blog.molitvina.ru',
+      'static.ghost.org',
+    ],
   },
 }
 

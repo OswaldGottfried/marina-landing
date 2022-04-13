@@ -3,27 +3,20 @@ import { Nullable } from '@tryghost/content-api'
 import Image from 'next/image'
 
 import Arrow from 'public/icons/arrow.svg'
-import { DesktopContentWrapper } from 'components/DesktopContentWrapper'
 import style from './Post.module.css'
 
 type Props = {
   title?: string
   __html: string
-  slug: string
   featureImage?: Nullable<string> | undefined
 }
 
-export const Post: React.FC<Props> = ({
-  __html,
-  title,
-  slug,
-  featureImage,
-}) => {
+export const Post: React.FC<Props> = ({ __html, title, featureImage }) => {
   const { back } = useRouter()
 
   return (
-    <main className="inner">
-      <header className="article-header gh-canvas">
+    <main className={style.post}>
+      <div className="container large">
         <button
           type="button"
           aria-label="Назад"
@@ -32,17 +25,18 @@ export const Post: React.FC<Props> = ({
         >
           <Arrow className={style.icon} /> Назад
         </button>
-        <h1 className={style.title}>{title}</h1>
+      </div>
+      <header className="gh-canvas post-header container large">
+        <h1 className="post-title">{title}</h1>
       </header>
       {featureImage && (
-        <figure className="article-header gh-canvas">
+        <figure className="post-media container large">
           <Image
             src={featureImage}
             alt={title}
             height={50}
             width={50}
-            // layout="fill"
-            // objectFit="contain"
+            objectFit="cover"
             sizes={`
               (max-width: 350px) 350px,
               (max-width: 530px) 530px,
@@ -54,7 +48,7 @@ export const Post: React.FC<Props> = ({
         </figure>
       )}
       <article
-        className={`post-full gh-content gh-canvas ${style.post}`}
+        className="post-content gh-content kg-canvas"
         dangerouslySetInnerHTML={{ __html }}
       />
     </main>

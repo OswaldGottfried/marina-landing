@@ -34,17 +34,13 @@ export const Cases: React.FC<Props> = ({ cases }) => {
       <DesktopContentWrapper as="section" className={style.cases}>
         <div className={style.column}>
           {firstColumn.map(
-            (
-              { id, title, slug, excerpt, feature_image: featureImage },
-              index,
-            ) => (
+            ({ id, title, slug, excerpt, feature_image: featureImage }) => (
               <PostCard
                 key={id}
                 image={featureImage}
                 title={title}
-                slug={slug}
-                showImage={index !== 0}
                 excerpt={excerpt}
+                slug={slug}
               />
             ),
           )}

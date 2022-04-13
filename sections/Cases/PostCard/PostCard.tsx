@@ -10,7 +10,6 @@ type Props = {
   excerpt?: string
   image?: string | null
   slug: string
-  showImage?: boolean
 }
 
 export const PostCard: React.FC<Props> = ({
@@ -19,30 +18,31 @@ export const PostCard: React.FC<Props> = ({
   slug,
   excerpt,
   title,
-  showImage = false,
 }) => {
-  const isImage = image && showImage
   return (
     <article
       className={clsx(className, style.postCard, {
-        [style.backgroundColor]: !isImage,
+        [style.backgroundColor]: !image,
         [style.withImage]: image,
       })}
     >
       <Link href={`/post/${slug}`}>
         <a href={`/post/${slug}`}>
-          {isImage && (
+          {image && (
             <Image
-              className={style.image}
-              layout="fill"
               objectFit="cover"
+              className={style.image}
+              height={300}
+              width={600}
               src={image}
               quality={40}
               alt={title}
             />
           )}
-          <h3 className={style.title}>{title}</h3>
-          {excerpt && <p>{excerpt}</p>}
+          <div className={style.description}>
+            <h3 className={style.title}>{title}</h3>
+            {excerpt && <p>{excerpt}</p>}
+          </div>
         </a>
       </Link>
     </article>
